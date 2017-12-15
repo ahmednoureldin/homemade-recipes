@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +20,42 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="IML-8k-5iS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="TsC-Uo-WX1">
+                                <rect key="frame" x="0.0" y="226.5" width="375" height="214"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Homemade  Recipes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ur-pb-LIZ">
+                                <rect key="frame" x="0.0" y="460.5" width="375" height="38"/>
+                                <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7ur-pb-LIZ" secondAttribute="trailing" id="FfK-Gh-ngD"/>
+                            <constraint firstAttribute="trailing" secondItem="IML-8k-5iS" secondAttribute="trailing" id="HhC-x9-zNP"/>
+                            <constraint firstItem="TsC-Uo-WX1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="L4J-Vc-Ufd"/>
+                            <constraint firstItem="7ur-pb-LIZ" firstAttribute="top" secondItem="TsC-Uo-WX1" secondAttribute="bottom" constant="20" id="NIf-VO-YmO"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="IML-8k-5iS" secondAttribute="bottom" id="V80-mk-jSh"/>
+                            <constraint firstItem="7ur-pb-LIZ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="VDB-jx-Ruv"/>
+                            <constraint firstItem="TsC-Uo-WX1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Y43-i5-kBm"/>
+                            <constraint firstAttribute="trailing" secondItem="TsC-Uo-WX1" secondAttribute="trailing" id="Ydy-6j-2ud"/>
+                            <constraint firstItem="IML-8k-5iS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="auV-dc-rZn"/>
+                            <constraint firstItem="IML-8k-5iS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="xPP-GP-hlm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="640" height="1136"/>
+        <image name="logo" width="253" height="214"/>
+    </resources>
 </document>
