@@ -12,7 +12,13 @@ class RecipeCategories {
 
     var category:[String] = []
     
+    func addCategory(x:String) {
+        
+        category.append(x)
     
+    }
+    
+   
 
     
     init(categoryname:String) {

@@ -17,6 +17,12 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
                             "MUSHROOM AND TOMATO OMELETTE",
                             "GOOD FAT FRITTERS"]
     
+    var LunchRecipes = ["Lunch",
+                            "Lunch",
+                            "Lunch",
+                            "Lunch",
+                            "Lunch"]
+    
     var breakfastRecipeDescription = [
         "1 Lorem ipsum dolor sit amet, ad adversarium mediocritatem qui, ne dicam accusata partiendo quo. Prompta honestatis usu ne, cu mei deleniti tractatos comprehensam, est quidam pertinax disputando te. Pri enim decore disputationi eu, an suas argumentum vim. Ut veniam rationibus omittantur pri.",
         "2 Lorem ipsum dolor sit amet, ad adversarium mediocritatem qui, ne dicam accusata partiendo quo. Prompta honestatis usu ne, cu mei deleniti tractatos comprehensam, est quidam pertinax disputando te. Pri enim decore disputationi eu, an suas argumentum vim. Ut veniam rationibus omittantur pri.",
@@ -49,7 +55,11 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
                 parkedArray.append(x)
             }
             
-  
+        } else if categorySelected == "Lunch" {
+        
+            for x in LunchRecipes {
+                parkedArray.append(x)
+            }
         
         }
         
@@ -79,7 +89,7 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
         cell.delegate = self
         if categorySelected == "Breakfast" {
         
-            cell.recipeName.text = breakfastRecipes[indexPath.row]
+            cell.recipeName.text = parkedArray[indexPath.row]
             cell.recipeDescription.text = breakfastRecipeDescription[indexPath.row]
             cell.recipeImg.image = UIImage(named: "breakfastRecipe\(indexPath.row).jpg")
             
@@ -87,7 +97,7 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
             
         }else if categorySelected == "Lunch"{
         
-            cell.recipeName.text = "Dummy Recipe Name"
+            cell.recipeName.text = parkedArray[indexPath.row]
             cell.recipeDescription.text = "dummy"
             cell.recipeImg.image = UIImage(named: "plate.png")
 
@@ -119,7 +129,7 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
         
         let destination = segue.destination as! RecipeIngredientsViewController
             
-            destination.recipeName = breakfastRecipes[myCell]
+            destination.recipeName = parkedArray[myCell]
             destination.recipeDescription = breakfastRecipeDescription[myCell]
             destination.recipeImg = "breakfastRecipe\(myCell).jpg"
             
