@@ -12,10 +12,11 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
 
     var categories:[String] = []
     var selectedCategory = ""
+    var cellIndexpathNumber:Int!
     
     @IBOutlet weak var recipeCategoriesList: UITableView!
     
-    let recipeCategories = RecipeCategories(categoryname: "Breakfast")
+    let recipeCategories = RecipeCategories()
 
     
     
@@ -34,25 +35,7 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
         recipeCategoriesList.backgroundView = imageview
         recipeCategoriesList.separatorStyle = UITableViewCellSeparatorStyle.none
         
-        recipeCategories.category.append("Brunch")
-        recipeCategories.category.append("Lunch")
-        recipeCategories.category.append("Snacks")
-        recipeCategories.category.append("Appetisers")
-        recipeCategories.category.append("Dinner")
-        recipeCategories.category.append("Soups")
-        recipeCategories.category.append("Noodles")
-        recipeCategories.category.append("Rice")
-        recipeCategories.category.append("Pasta")
-        recipeCategories.category.append("Meat")
-        recipeCategories.category.append("Poultry")
-        recipeCategories.category.append("Seafood")
-        recipeCategories.category.append("Vegetarian")
-        recipeCategories.category.append("Salads")
-        recipeCategories.category.append("Sides")
-        recipeCategories.category.append("Sauces")
-        recipeCategories.category.append("Baking")
-        recipeCategories.category.append("Desserts")
-        recipeCategories.category.append("Drinks")
+        
         
         
         
@@ -111,6 +94,10 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
         
             selectedCategory = (currentCell.textLabel?.text)!
             
+            let indexPath = self.recipeCategoriesList.indexPath(for: currentCell)
+            
+            cellIndexpathNumber = (indexPath?.row)!
+            
         }
         
 
@@ -124,6 +111,7 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
         
             let destination = segue.destination as! RecipeListViewController
             destination.categorySelected = selectedCategory
+            destination.cellSelected = cellIndexpathNumber
             
         }
         

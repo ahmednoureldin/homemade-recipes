@@ -21,7 +21,26 @@ class RecipeCategories {
    
 
     
-    init(categoryname:String) {
-        category.append(categoryname)
+    init() {
+       category.append("Breakfast")
+       category.append("Brunch")
+       category.append("Lunch")
+       category.append("Snacks")
+       category.append("Appetisers")
+       category.append("Dinner")
+       category.append("Soups")
+       category.append("Noodles")
+       category.append("Rice")
+       category.append("Pasta")
+       category.append("Meat")
+       category.append("Poultry")
+       category.append("Seafood")
+       category.append("Vegetarian")
+       category.append("Salads")
+       category.append("Sides")
+       category.append("Sauces")
+       category.append("Baking")
+       category.append("Desserts")
+       category.append("Drinks")
     }
 }

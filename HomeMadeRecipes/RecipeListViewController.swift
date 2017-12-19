@@ -31,6 +31,7 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
         "5 Lorem ipsum dolor sit amet, ad adversarium mediocritatem qui, ne dicam accusata partiendo quo. Prompta honestatis usu ne, cu mei deleniti tractatos comprehensam, est quidam pertinax disputando te. Pri enim decore disputationi eu, an suas argumentum vim. Ut veniam rationibus omittantur pri."
     ]
     var categorySelected = ""
+    var cellSelected:Int!
     var recipeNameSelected = ""
     var myCell = 0
     var btnPressedTag:Int!
@@ -49,19 +50,32 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
         
         
         
-        if categorySelected == "Breakfast" {
+//        if categorySelected == "Breakfast" {
+//        
+//            for x in breakfastRecipes {
+//                parkedArray.append(x)
+//            }
+//            
+//        } else if categorySelected == "Lunch" {
+//        
+//            for x in LunchRecipes {
+//                parkedArray.append(x)
+//            }
+//        
+//        }
         
+        if cellSelected == 0 {
+            
             for x in breakfastRecipes {
                 parkedArray.append(x)
             }
-            
-        } else if categorySelected == "Lunch" {
+        } else {
         
             for x in LunchRecipes {
                 parkedArray.append(x)
             }
-        
         }
+        
         
     }
 
@@ -104,7 +118,7 @@ class RecipeListViewController: UIViewController ,UITableViewDelegate,UITableVie
             
         } else {
         
-            cell.recipeName.text = "Dummy Recipe Name"
+            cell.recipeName.text = parkedArray[indexPath.row]
             cell.recipeDescription.text = breakfastRecipeDescription[0]
             cell.recipeImg.image = UIImage(named: "breakfastRecipe1.jpg")
         
