@@ -16,6 +16,7 @@
 		E26E61F41FDBC2FD002EA6F4 /* RecipeCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E61F31FDBC2FD002EA6F4 /* RecipeCategoriesVC.swift */; };
 		E2DB58D21FE288CE00960F8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DB58D01FE288CE00960F8C /* Main.storyboard */; };
 		E2F59E011FE01FB700B6BD9E /* ReciepeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F59E001FE01FB700B6BD9E /* ReciepeTableViewCell.swift */; };
+		E2F623521FEE365F0009C7BE /* CategoryRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F623511FEE365F0009C7BE /* CategoryRecipes.swift */; };
 		E2FB2A031FE0F09D00A99E7E /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB2A021FE0F09D00A99E7E /* RecipeIngredientsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		E26E61F31FDBC2FD002EA6F4 /* RecipeCategoriesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCategoriesVC.swift; sourceTree = "<group>"; };
 		E2DB58D11FE288CE00960F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2F59E001FE01FB700B6BD9E /* ReciepeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReciepeTableViewCell.swift; sourceTree = "<group>"; };
+		E2F623511FEE365F0009C7BE /* CategoryRecipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRecipes.swift; sourceTree = "<group>"; };
 		E2FB2A021FE0F09D00A99E7E /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E23FCD711FDE5B40005DBE1B /* RecipeCategories.swift */,
+				E2F623511FEE365F0009C7BE /* CategoryRecipes.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E23FCD701FDE5576005DBE1B /* RecipeListViewController.swift in Sources */,
+				E2F623521FEE365F0009C7BE /* CategoryRecipes.swift in Sources */,
 				E2FB2A031FE0F09D00A99E7E /* RecipeIngredientsViewController.swift in Sources */,
 				E23FCD721FDE5B40005DBE1B /* RecipeCategories.swift in Sources */,
 				E26E61F41FDBC2FD002EA6F4 /* RecipeCategoriesVC.swift in Sources */,

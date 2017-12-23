@@ -12,15 +12,7 @@ class RecipeCategories {
 
     var category:[String] = []
     
-    func addCategory(x:String) {
-        
-        category.append(x)
-    
-    }
-    
-   
 
-    
     init() {
        category.append("Breakfast")
        category.append("Brunch")
@@ -42,5 +34,6 @@ class RecipeCategories {
        category.append("Baking")
        category.append("Desserts")
        category.append("Drinks")
+    
     }
 }

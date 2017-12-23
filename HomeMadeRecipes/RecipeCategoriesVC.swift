@@ -12,35 +12,29 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
 
     var categories:[String] = []
     var selectedCategory = ""
-    var cellIndexpathNumber:Int!
-    
     @IBOutlet weak var recipeCategoriesList: UITableView!
     
+    // an instance of RecipeCategories class
     let recipeCategories = RecipeCategories()
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         recipeCategoriesList.delegate = self
         recipeCategoriesList.dataSource = self
         
-        
+        // changing background image of a tableview
         let backgroundImage = UIImage(named:"background.png")
         let imageview = UIImageView(image: backgroundImage)
         recipeCategoriesList.backgroundView = imageview
+        // remove tableview separator
         recipeCategoriesList.separatorStyle = UITableViewCellSeparatorStyle.none
         
-        
-        
-        
-        
-       
+        // filling categories array
         categories = recipeCategories.category
+        
+
         
     }
 
@@ -50,17 +44,6 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -73,37 +56,24 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell")!
-        cell.textLabel!.text = categories[indexPath.row]
+
+        cell.textLabel!.text = recipeCategories.category[indexPath.row]
         cell.textLabel!.textColor = UIColor.white
-        
-        
-        
+
         return cell
     }
     
 
-    
-
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        
-        
-        if currentCell.textLabel?.text != nil {
-        
+
             selectedCategory = (currentCell.textLabel?.text)!
-            
-            let indexPath = self.recipeCategoriesList.indexPath(for: currentCell)
-            
-            cellIndexpathNumber = (indexPath?.row)!
-            
-        }
-        
 
         performSegue(withIdentifier: "recipesList", sender: self)
         
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -111,7 +81,6 @@ class RecipeCategoriesVC: UIViewController, UITableViewDelegate, UITableViewData
         
             let destination = segue.destination as! RecipeListViewController
             destination.categorySelected = selectedCategory
-            destination.cellSelected = cellIndexpathNumber
             
         }
         
